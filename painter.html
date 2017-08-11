@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>画板</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            overflow: hidden
+        }
+        #box{
+            /*width: 300px;*/
+            /*height: 50px;*/
+            background-color: #242424;
+        }
+
+        #toolMenu{
+            position: absolute;
+        }
+
+        #openButton{
+            width: 40px;
+            height: 40px;
+            background-color: #ffc31a;
+            border-radius:50% ;
+        }
+
+        .tool{
+            display: none;
+            background-color: #afff97;
+            padding: 10px;
+        }
+        .tool li{
+            margin-top:5px;
+            background-color: #a687ee;
+        }
+        #eraser{
+            widtsh: 60px;
+            height: 40px;
+            background-color: #ffc31a;
+            border-radius:30% ;
+        }
+    </style>
+</head>
+<body>
+
+<div id="toolMenu">
+
+    <div id="openButton">
+
+    </div>
+
+    <ul class="tool">
+        <li>宽度：<input type="range"></li>
+        <li>颜色：<input type="color"></li>
+        <button id="eraser">橡皮</button>
+
+    </ul>
+
+</div>
+
+<canvas id="box"></canvas>
+
+</body>
+<script src="painter.js"></script>
+<script src="main.js"></script>
+</html>
